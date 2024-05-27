@@ -50,7 +50,7 @@ class FloatingWindow(QMainWindow):
             event.accept()
 
     def closeEvent(self, event):
-        # Properly close the Streamlit thread when the window is closed
+     
         self.streamlit_thread.join()
         super().closeEvent(event)
 
