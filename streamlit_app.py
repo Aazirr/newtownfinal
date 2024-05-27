@@ -36,4 +36,6 @@ if user_input:
     suggestions = suggest_next_words(user_input, num_suggestions)
     st.write("Next word suggestions:")
     for suggestion in suggestions:
-        st.write(f"- {suggestion}")
+        if st.button(suggestion):
+            user_input += ' ' + suggestion
+            st.text_input("Enter your text here:", user_input)
