@@ -38,7 +38,7 @@ def suggest_next_words(text, num_suggestions=5):
             break
     return suggestions
 
-st.title("Next Word Suggestion App")
+st.title("Next Word Genius")
 
 if 'input_text' not in st.session_state:
     st.session_state.input_text = ""
@@ -71,6 +71,6 @@ if 'file_mod_time' not in st.session_state:
 
 st.session_state.file_mod_time = check_for_file_update("current_text.txt", st.session_state.file_mod_time)
 
-# Schedule a rerun
+
 time.sleep(0.5)
 st.experimental_rerun()

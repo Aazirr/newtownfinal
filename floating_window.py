@@ -34,7 +34,6 @@ class FloatingWindow(QMainWindow):
         self.streamlit_thread.start()
 
     def load_streamlit_app(self):
-        # Load the local Streamlit app
         self.browser.setUrl(QUrl("http://localhost:8501"))
 
     def mousePressEvent(self, event):
